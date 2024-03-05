@@ -20,9 +20,10 @@ requirements:
     - python >=3.8
     - wheel
   run:
+    - boto3
     - filelock
     - lightning-cloud ==0.5.64
-    - lightning-utilities >=0.8.0,<0.10.0
+    - lightning-utilities >=0.8.0,<0.11.0
     - numpy
     - pillow
     - pyarrow
@@ -41,7 +42,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/Lightning-AI/lit-data
+  home: https://github.com/Lightning-AI/litdata
   summary: The Deep Learning framework to train, deploy, and ship AI products Lightning fast.
   license: Apache-2.0
   license_file: LICENSE
