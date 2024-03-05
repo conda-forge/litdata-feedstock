@@ -3,7 +3,7 @@ About litdata-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/litdata-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/Lightning-AI/lit-data
+Home: https://github.com/Lightning-AI/litdata
 
 Package license: Apache-2.0
 

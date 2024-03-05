@@ -1,5 +1,5 @@
 {% set name = "litdata" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/litdata-{{ version }}.tar.gz
-  sha256: 3c1023f0a72dfa24c6d97d81352d2b7bc979f25f3f7be89dbd89d5374adccdfe
+  sha256: 6a2935bbb4c4ec3da670b8b26f5daa59edeee8baabcb89fc2df0c5cfd52d25e0
 
 build:
   noarch: python
@@ -20,9 +20,10 @@ requirements:
     - python >=3.8
     - wheel
   run:
+    - boto3
     - filelock
     - lightning-cloud ==0.5.64
-    - lightning-utilities >=0.8.0,<0.10.0
+    - lightning-utilities >=0.8.0,<0.11.0
     - numpy
     - pillow
     - pyarrow
@@ -41,7 +42,7 @@ test:
     - pip
 
 about:
-  home: https://github.com/Lightning-AI/lit-data
+  home: https://github.com/Lightning-AI/litdata
   summary: The Deep Learning framework to train, deploy, and ship AI products Lightning fast.
   license: Apache-2.0
   license_file: LICENSE
