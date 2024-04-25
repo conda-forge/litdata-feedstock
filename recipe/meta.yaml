@@ -1,5 +1,5 @@
 {% set name = "litdata" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/litdata-{{ version }}.tar.gz
-  sha256: abc0026574f7c888ba7266870c32b4f3b01cb7fe72721de7e9e2fe0f2172f68b
+  sha256: 94b283c347de0b7e681f957db53750b78b009b612a466164322bfe2980fd6846
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - filelock
     - numpy
     - python >=3.8
-    - pytorch >=2.1.0
+    - pytorch
     - requests
 
 test:
