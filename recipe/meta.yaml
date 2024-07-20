@@ -22,7 +22,7 @@ requirements:
   run:
     - boto3
     - filelock
-    - numpy <2.0.0
+    - numpy
     - python >=3.8
     - pytorch
     - requests
@@ -32,6 +32,8 @@ test:
     - litdata
   commands:
     - pip check
+    # https://github.com/Lightning-AI/litdata/pull/230
+    - python -c "import numpy as np; from litdata.streaming.serializers import NoHeaderNumpySerializer; serializer = NoHeaderNumpySerializer(); assert serializer.can_serialize(np.ones((10,)))"
   requires:
     - pip
 
