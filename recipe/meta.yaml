@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/litdata-{{ version }}.tar.gz
   sha256: 8dfb690844b413af8e141606c643fceb46661fc9171e91db15a398d2e7162386
-  patches:
-    - numpy2.patch
 
 build:
   noarch: python
