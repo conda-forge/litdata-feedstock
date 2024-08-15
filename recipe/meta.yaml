@@ -1,5 +1,5 @@
 {% set name = "litdata" %}
-{% set version = "0.2.23" %}
+{% set version = "0.2.24" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/litdata-{{ version }}.tar.gz
-  sha256: 7efc289b42698583aa581a7112919a571b881ef68b8a8f8c52fa007e62c7b144
+  sha256: 8e5839f0ae302dcf6b3a25f432e7a45d378d2208b4147c81d84a36ad5a7a0f66
 
 build:
   noarch: python
