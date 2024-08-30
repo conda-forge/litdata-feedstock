@@ -18,11 +18,12 @@ requirements:
   host:
     - pip
     - python >=3.8
+    - setuptools
     - wheel
   run:
-    - lightning-utilities
     - boto3
     - filelock
+    - lightning-utilities
     - numpy
     - python >=3.8
     - pytorch
