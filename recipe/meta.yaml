@@ -1,5 +1,5 @@
 {% set name = "litdata" %}
-{% set version = "0.2.30" %}
+{% set version = "0.2.31" %}
 {% set python_min = python_min|default("3.8") %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/litdata-{{ version }}.tar.gz
-  sha256: 62ecce703f5368c91e75da2247a23d6c573aae8ca135ee69fcb3d173cfaa1613
+  sha256: c13516e1ba75c8f3abe433d64ba6ca772ef23f1250c53e7a5adb0059912a81ec
 
 build:
   noarch: python
@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - pip
-    - python {{ python_min }}.*
+    - python {{ python_min }}
     - setuptools
     - wheel
   run:
@@ -39,7 +39,7 @@ test:
     - python -c "import numpy as np; from litdata.streaming.serializers import NoHeaderNumpySerializer; serializer = NoHeaderNumpySerializer(); assert serializer.can_serialize(np.ones((10,)))"
   requires:
     - pip
-    - python ={{ python_min }}
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Lightning-AI/litdata
