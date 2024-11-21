@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - pip
-    - python {{ python_min }}.*
+    - python {{ python_min }}
     - setuptools
     - wheel
   run:
@@ -39,7 +39,7 @@ test:
     - python -c "import numpy as np; from litdata.streaming.serializers import NoHeaderNumpySerializer; serializer = NoHeaderNumpySerializer(); assert serializer.can_serialize(np.ones((10,)))"
   requires:
     - pip
-    - python ={{ python_min }}
+    - python {{ python_min }}
 
 about:
   home: https://github.com/Lightning-AI/litdata
