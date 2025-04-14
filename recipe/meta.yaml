@@ -1,5 +1,5 @@
 {% set name = "litdata" %}
-{% set version = "0.2.44" %}
+{% set version = "0.2.45" %}
 {% set python_min = python_min|default("3.8") %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/litdata-{{ version }}.tar.gz
-  sha256: 0c2ad485d4692702d97a396bfe6017f9ac2af2832bb39fae99fd49c26e207a0e
+  sha256: f0801cb13f5d31215edbb681fb84fb0629340ed74c1f3b3e68a603953c8b6135
 
 build:
   noarch: python
@@ -30,6 +30,7 @@ requirements:
     - pytorch
     - requests
     - tifffile
+    - torchvision
 
 test:
   imports:
