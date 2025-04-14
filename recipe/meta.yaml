@@ -22,7 +22,6 @@ requirements:
     - setuptools
     - wheel
   run:
-    - torchvision
     - boto3
     - filelock
     - lightning-utilities
@@ -31,6 +30,7 @@ requirements:
     - pytorch
     - requests
     - tifffile
+    - torchvision
 
 test:
   imports:
