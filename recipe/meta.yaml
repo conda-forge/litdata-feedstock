@@ -1,5 +1,5 @@
 {% set name = "litdata" %}
-{% set version = "0.2.50" %}
+{% set version = "0.2.51" %}
 {% set python_min = python_min|default("3.8") %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/litdata-{{ version }}.tar.gz
-  sha256: 6230bfb4ec38bdd018e7e99b6ff5ad1c8dc7af9aab8a743e65eaaee3c19cd1ee
+  sha256: dae074abbf8fe32b8384e0e450e48d225c03b86984cecdbeb933f2215ebb51f7
 
 build:
   noarch: python
@@ -22,6 +22,7 @@ requirements:
     - setuptools
     - wheel
   run:
+    - obstore
     - boto3
     - filelock
     - lightning-utilities
