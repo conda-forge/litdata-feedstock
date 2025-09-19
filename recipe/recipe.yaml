@@ -1,0 +1,60 @@
+schema_version: 1
+
+context:
+  name: litdata
+  version: "0.2.55"
+  python_min: "3.9"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/litdata-${{ version }}.tar.gz
+  sha256: 0d9af35f13224d768b914e74d77e6b37f1d485f5487faf0792f9efc135556e16
+
+build:
+  number: 0
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+
+requirements:
+  host:
+    - pip
+    - python ${{ python_min }}.*
+    - setuptools
+    - wheel
+  run:
+    - boto3
+    - filelock
+    - lightning-utilities
+    - numpy
+    - obstore
+    - python >=${{ python_min }}
+    - pytorch
+    - requests
+    - tifffile
+    - torchvision
+
+tests:
+  - python:
+      imports:
+        - litdata
+      pip_check: true
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - python ${{ python_min }}.*
+    script:
+      # https://github.com/Lightning-AI/litdata/pull/230
+      - python -c "import numpy as np; from litdata.streaming.serializers import NoHeaderNumpySerializer; serializer = NoHeaderNumpySerializer(); assert serializer.can_serialize(np.ones((10,)))"
+
+about:
+  homepage: https://github.com/Lightning-AI/litdata
+  summary: Transform datasets at scale. Optimize datasets for fast AI model training.
+  license: Apache-2.0
+  license_file: LICENSE
+
+extra:
+  recipe-maintainers:
+    - weiji14
