@@ -7,7 +7,7 @@ Home: https://github.com/Lightning-AI/litdata
 
 Package license: Apache-2.0
 
-Summary: The Deep Learning framework to train, deploy, and ship AI products Lightning fast.
+Summary: Transform datasets at scale. Optimize datasets for fast AI model training.
 
 Current build status
 ====================
