@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: litdata
-  version: "0.2.55"
+  version: "0.2.56"
   python_min: "3.9"
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/litdata-${{ version }}.tar.gz
-  sha256: 0d9af35f13224d768b914e74d77e6b37f1d485f5487faf0792f9efc135556e16
+  sha256: 124471881dbdf860dd34ceec7032bffca3f49cc7e924d7bf061460f33f76e214
 
 build:
   number: 0
