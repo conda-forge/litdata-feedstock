@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: litdata
-  version: "0.2.71"
-  python_min: "3.10"
+  version: 0.2.72
+  python_min: '3.10'
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/litdata-${{ version }}.tar.gz
-  sha256: 2d8cc2ba5d880cf3eb55d5ab5fe93d8ccdffd7f4c0697c264b89fcdb99e63b79
+  sha256: 76df5fb71233f97310eb1d406f0a09cff4fd204863a8fc5e694c6f2db1f612f2
 
 build:
   number: 0
@@ -35,7 +35,7 @@ requirements:
     - requests
     - tifffile
     - torchvision
-
+    - urllib3 >=1.26
 tests:
   - python:
       imports:
@@ -43,7 +43,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}.*
-        - "*"
+        - '*'
   - requirements:
       run:
         - python ${{ python_min }}.*
