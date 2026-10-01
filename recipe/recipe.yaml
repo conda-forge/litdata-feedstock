@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: litdata
-  version: "0.2.75"
+  version: 0.2.76
   python_min: '3.10'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/litdata-${{ version }}.tar.gz
-  sha256: 81df4bcc419dab7b64846c9b0449dd99a5319ddd8f663d60f9b583b933ce908f
+  sha256: 10b38e23421528ea69064836dacfe8e7ec93992d0aff392fdba716847e3a5012
 
 build:
   number: 0
@@ -31,7 +31,7 @@ requirements:
     - numpy
     - obstore
     - python >=${{ python_min }}
-    - pytorch
+    - pytorch >=2.4.0
     - requests
     - tifffile
     - torchvision
